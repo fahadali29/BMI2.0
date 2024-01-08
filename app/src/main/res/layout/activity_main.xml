@@ -22,10 +22,12 @@
 
     <RelativeLayout
         android:id="@+id/height"
-        android:layout_width="340dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_above="@id/horizontel"
         android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/crdbg">
 
         <TextView
@@ -33,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="@string/height"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -75,16 +77,19 @@
     </RelativeLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/colorButton"
         android:text="@string/calculate"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:cornerRadius="10dp" />
 
     <RelativeLayout
@@ -156,7 +161,7 @@
         android:layout_height="160dp"
         android:layout_alignBottom="@id/verticle"
         android:background="@drawable/notfocus"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="120dp"
         android:layout_above="@id/height">
@@ -173,30 +178,32 @@
             android:text="Weight"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/weightcounter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="55"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_centerInParent="true"/>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_toStartOf="@id/weightcounter"
             android:layout_centerInParent="true"
-            android:background="@drawable/plusminus"
+            android:text="55"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
+            android:layout_toStartOf="@id/weightcounter"
+            android:background="@drawable/plusminus"
             android:src="@drawable/minus" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="20dp"
             android:layout_toEndOf="@id/weightcounter"
             android:background="@drawable/plusminus"
@@ -223,31 +230,32 @@
             android:text="@string/age"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/agecounter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="@string/_55"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_centerInParent="true"/>
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_toStartOf="@id/agecounter"
             android:background="@drawable/plusminus"
             android:src="@drawable/minus" />
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_toEndOf="@id/agecounter"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/plusminus"
             android:src="@drawable/add" />
 </RelativeLayout>
